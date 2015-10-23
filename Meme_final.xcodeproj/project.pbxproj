@@ -193,6 +193,7 @@
 				TargetAttributes = {
 					8B19D2581BDA7C0100BFFE00 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 7385PSVS54;
 					};
 					8B19D26C1BDA7C0100BFFE00 = {
 						CreatedOnToolsVersion = 7.1;
@@ -399,6 +400,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Meme_final/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "greymatter.Meme-final";
@@ -410,6 +412,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Meme_final/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "greymatter.Meme-final";
