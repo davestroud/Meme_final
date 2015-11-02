@@ -15,15 +15,15 @@ class DetailVIewController: UIViewController {
     
     @IBOutlet weak var detailImageView: UIImageView!
     
-    @IBAction func editButtonItem() -> AnyObject {
-        let memeEditorViewController = storyboard?.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
+    @IBAction func editButton(sender: AnyObject){
+        let memeEditorViewController = storyboard?.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
         memeEditorViewController .meme = chosenMeme
         presentViewController(memeEditorViewController, animated: true, completion: nil)
     }
     
     @IBAction func deleteButton(sender: AnyObject) {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        if let _ indexOfChosenMeme {
+        if let _ = indexOfChosenMeme {
             appDelegate.memes.removeAtIndex(indexOfChosenMeme!)
             navigationController?.popViewControllerAnimated(true)
         }

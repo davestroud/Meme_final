@@ -101,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="786" y="942"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--DetailV Iew Controller-->
         <scene sceneID="zKz-eU-1gv">
             <objects>
-                <viewController id="Y7V-yL-AfT" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="Y7V-yL-AfT" customClass="DetailVIewController" customModule="Meme_final" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mz5-Eg-qgi"/>
                         <viewControllerLayoutGuide type="bottom" id="sbx-MC-Uo6"/>
@@ -112,18 +112,26 @@
                     <view key="view" contentMode="scaleToFill" id="XLA-Hg-EFf">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eP8-kz-2aQ">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <animations/>
-                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NcT-Kn-Lgf">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <animations/>
                                 <items>
-                                    <barButtonItem systemItem="edit" id="DG3-ys-3Cx"/>
-                                    <barButtonItem systemItem="trash" id="HEx-7U-88a"/>
+                                    <barButtonItem systemItem="edit" id="DG3-ys-3Cx">
+                                        <connections>
+                                            <action selector="editButton:" destination="Y7V-yL-AfT" id="RV1-4F-70B"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="trash" id="HEx-7U-88a">
+                                        <connections>
+                                            <action selector="deleteButton:" destination="Y7V-yL-AfT" id="idY-UY-IUP"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eP8-kz-2aQ" userLabel="Detail Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -139,8 +147,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="eP8-kz-2aQ"/>
                                 <exclude reference="NcT-Kn-Lgf"/>
+                                <exclude reference="eP8-kz-2aQ"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="SQj-R8-Thb"/>
@@ -155,8 +163,8 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="eP8-kz-2aQ"/>
                                 <include reference="NcT-Kn-Lgf"/>
+                                <include reference="eP8-kz-2aQ"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="SQj-R8-Thb"/>
@@ -170,10 +178,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="detailImageView" destination="eP8-kz-2aQ" id="Tie-9K-jXs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kbW-Kr-XQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1569" y="954"/>
+            <point key="canvasLocation" x="1560" y="1505"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="VuF-YQ-H1b">
@@ -213,10 +224,10 @@
             </objects>
             <point key="canvasLocation" x="777" y="181"/>
         </scene>
-        <!--Meme Editor View Controller-->
+        <!--View Controller-->
         <scene sceneID="MEZ-5e-DgK">
             <objects>
-                <viewController id="qLv-6e-3ob" customClass="MemeEditorViewController" customModule="Meme_final" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qLv-6e-3ob" customClass="ViewController" customModule="Meme_final" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cy0-xb-QwD"/>
                         <viewControllerLayoutGuide type="bottom" id="jnD-RC-8az"/>
@@ -229,16 +240,32 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <animations/>
                                 <items>
-                                    <barButtonItem systemItem="camera" id="wOg-eW-wdP"/>
-                                    <barButtonItem title="Album" id="e9E-fS-vik"/>
+                                    <barButtonItem systemItem="camera" id="wOg-eW-wdP">
+                                        <connections>
+                                            <action selector="pickAnImageFromCamera:" destination="qLv-6e-3ob" id="azq-RW-Mwm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Album" id="e9E-fS-vik">
+                                        <connections>
+                                            <action selector="pickAnImage:" destination="qLv-6e-3ob" id="2N6-wp-zZe"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NuC-qC-MdE">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <animations/>
                                 <items>
-                                    <barButtonItem systemItem="action" id="r8l-2G-tLd"/>
-                                    <barButtonItem systemItem="cancel" id="er4-n0-6M3"/>
+                                    <barButtonItem systemItem="action" id="r8l-2G-tLd">
+                                        <connections>
+                                            <action selector="shareAnImage:" destination="qLv-6e-3ob" id="6mn-qv-NtK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="cancel" id="er4-n0-6M3">
+                                        <connections>
+                                            <action selector="cancelAnImage:" destination="qLv-6e-3ob" id="RXP-u1-c5j"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MIW-ro-B9r">
@@ -345,10 +372,21 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="albumPickerButton" destination="e9E-fS-vik" id="0kD-mD-xys"/>
+                        <outlet property="bottomTextField" destination="d0h-hk-DNK" id="7mM-e8-bg4"/>
+                        <outlet property="bottomToolBar" destination="o1q-RH-Dbx" id="3Wd-bS-pje"/>
+                        <outlet property="cameraButton" destination="wOg-eW-wdP" id="A4g-0J-RIt"/>
+                        <outlet property="cancelButton" destination="er4-n0-6M3" id="oju-mf-s5x"/>
+                        <outlet property="imagePickerView" destination="3Tx-LX-Ifx" id="EHe-M8-Xvq"/>
+                        <outlet property="shareButton" destination="r8l-2G-tLd" id="fGG-Q4-wsE"/>
+                        <outlet property="topTextField" destination="MIW-ro-B9r" id="j7C-PF-YXj"/>
+                        <outlet property="topToolBar" destination="NuC-qC-MdE" id="iLU-si-qtD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMC-nN-4Qn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1470" y="181"/>
+            <point key="canvasLocation" x="1593" y="692"/>
         </scene>
         <!--Item-->
         <scene sceneID="edO-jr-hnP">
@@ -370,6 +408,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="memeImage" width="16" height="16"/>
+        <image name="memeImage" width="75" height="65"/>
     </resources>
 </document>
