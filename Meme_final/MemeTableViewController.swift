@@ -6,4 +6,18 @@
 //  Copyright © 2015 greymatter-home. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+
+class MemeTableViewController: UITableViewController {
+    
+    var memes: [Meme]!
+    let cellIdentifier = "MemeTableViewCell"
+    let appDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate).memes
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+
+}
