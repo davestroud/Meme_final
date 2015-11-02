@@ -18,6 +18,29 @@ class MemeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        if self.memes.count == 0 {
+            let storyboard = self.storyboard
+            let vc = storyboard!.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! ViewController
+            self.presentViewController(vc, animated: true, completion: nil)
+        } else {
+            super.viewDidAppear(true)
+            tableView.reloadData()
+        }
+    }
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
 
-
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let meme = memes[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! MemeTableViewCell
+        cell.memeImage?.image = meme.memedImage
+        cell.title?.text = "\(meme.topText!) ... \(meme.bottomText)"
+        
+        return cell
+        
+    }
 }
