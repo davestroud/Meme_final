@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9048"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -100,6 +101,80 @@
             </objects>
             <point key="canvasLocation" x="786" y="942"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="zKz-eU-1gv">
+            <objects>
+                <viewController id="Y7V-yL-AfT" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mz5-Eg-qgi"/>
+                        <viewControllerLayoutGuide type="bottom" id="sbx-MC-Uo6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XLA-Hg-EFf">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eP8-kz-2aQ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NcT-Kn-Lgf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem systemItem="edit" id="DG3-ys-3Cx"/>
+                                    <barButtonItem systemItem="trash" id="HEx-7U-88a"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NcT-Kn-Lgf" firstAttribute="leading" secondItem="XLA-Hg-EFf" secondAttribute="leadingMargin" constant="-20" id="Ls1-xj-ObU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NcT-Kn-Lgf" secondAttribute="trailing" constant="-20" id="OQb-kL-9ix"/>
+                            <constraint firstItem="eP8-kz-2aQ" firstAttribute="trailing" secondItem="XLA-Hg-EFf" secondAttribute="trailingMargin" id="SQj-R8-Thb"/>
+                            <constraint firstItem="eP8-kz-2aQ" firstAttribute="leading" secondItem="XLA-Hg-EFf" secondAttribute="leadingMargin" id="UTw-U8-nP4"/>
+                            <constraint firstItem="eP8-kz-2aQ" firstAttribute="top" secondItem="mz5-Eg-qgi" secondAttribute="bottom" id="Y0U-kz-gl6"/>
+                            <constraint firstItem="NcT-Kn-Lgf" firstAttribute="top" secondItem="eP8-kz-2aQ" secondAttribute="bottom" constant="20" id="k9r-sS-QMX"/>
+                            <constraint firstItem="sbx-MC-Uo6" firstAttribute="top" secondItem="eP8-kz-2aQ" secondAttribute="bottom" constant="72" id="kmg-f4-XGH"/>
+                            <constraint firstItem="sbx-MC-Uo6" firstAttribute="top" secondItem="NcT-Kn-Lgf" secondAttribute="bottom" constant="8" id="wce-NQ-RnA"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="eP8-kz-2aQ"/>
+                                <exclude reference="NcT-Kn-Lgf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="SQj-R8-Thb"/>
+                                <exclude reference="UTw-U8-nP4"/>
+                                <exclude reference="Y0U-kz-gl6"/>
+                                <exclude reference="Ls1-xj-ObU"/>
+                                <exclude reference="OQb-kL-9ix"/>
+                                <exclude reference="k9r-sS-QMX"/>
+                                <exclude reference="kmg-f4-XGH"/>
+                                <exclude reference="wce-NQ-RnA"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="eP8-kz-2aQ"/>
+                                <include reference="NcT-Kn-Lgf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="SQj-R8-Thb"/>
+                                <include reference="UTw-U8-nP4"/>
+                                <include reference="Y0U-kz-gl6"/>
+                                <include reference="Ls1-xj-ObU"/>
+                                <include reference="OQb-kL-9ix"/>
+                                <include reference="k9r-sS-QMX"/>
+                                <include reference="kmg-f4-XGH"/>
+                                <include reference="wce-NQ-RnA"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbW-Kr-XQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1569" y="954"/>
+        </scene>
         <!--Collection View Controller-->
         <scene sceneID="VuF-YQ-H1b">
             <objects>
@@ -138,10 +213,10 @@
             </objects>
             <point key="canvasLocation" x="777" y="181"/>
         </scene>
-        <!--View Controller-->
+        <!--Meme Editor View Controller-->
         <scene sceneID="MEZ-5e-DgK">
             <objects>
-                <viewController id="qLv-6e-3ob" sceneMemberID="viewController">
+                <viewController id="qLv-6e-3ob" customClass="MemeEditorViewController" customModule="Meme_final" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cy0-xb-QwD"/>
                         <viewControllerLayoutGuide type="bottom" id="jnD-RC-8az"/>
