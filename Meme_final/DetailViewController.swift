@@ -16,7 +16,7 @@ class DetailVIewController: UIViewController {
     @IBOutlet weak var detailImageView: UIImageView!
     
     @IBAction func editButton(sender: AnyObject){
-        let memeEditorViewController = storyboard?.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+        let memeEditorViewController = storyboard?.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
         memeEditorViewController .meme = chosenMeme
         presentViewController(memeEditorViewController, animated: true, completion: nil)
     }

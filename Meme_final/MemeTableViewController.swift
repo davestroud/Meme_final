@@ -22,7 +22,7 @@ class MemeTableViewController: UITableViewController {
     override func viewDidAppear(animated: Bool) {
         if self.memes.count == 0 {
             let storyboard = self.storyboard
-            let vc = storyboard!.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! ViewController
+            let vc = storyboard!.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
             self.presentViewController(vc, animated: true, completion: nil)
         } else {
             super.viewDidAppear(true)
@@ -44,11 +44,11 @@ class MemeTableViewController: UITableViewController {
         
     }
     
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         let detailVC = storyboard!.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
         detailVC.chosenMeme = memes[indexPath.row]
-        detailVC.indexofChosenMeme = indexPath.row
+        detailVC.indexOfChosenMeme = indexPath.row
         navigationController!.pushViewController(detailVC, animated: true)
     }
 }
