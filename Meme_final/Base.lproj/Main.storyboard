@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9048"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -61,6 +62,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dyc-gd-9Jt">
+                                            <rect key="frame" x="80" y="11" width="34" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -71,6 +73,7 @@
                                             </variation>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y4x-uH-VXk">
+                                            <rect key="frame" x="541" y="11" width="44" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -81,6 +84,7 @@
                                             </variation>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="memeImage" id="NPq-NM-OCx">
+                                            <rect key="frame" x="15" y="0.0" width="50" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </imageView>
@@ -110,6 +114,7 @@
                         <viewControllerLayoutGuide type="bottom" id="sbx-MC-Uo6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XLA-Hg-EFf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NcT-Kn-Lgf">
@@ -151,14 +156,14 @@
                                 <exclude reference="eP8-kz-2aQ"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="SQj-R8-Thb"/>
-                                <exclude reference="UTw-U8-nP4"/>
-                                <exclude reference="Y0U-kz-gl6"/>
+                                <exclude reference="kmg-f4-XGH"/>
+                                <exclude reference="wce-NQ-RnA"/>
                                 <exclude reference="Ls1-xj-ObU"/>
                                 <exclude reference="OQb-kL-9ix"/>
                                 <exclude reference="k9r-sS-QMX"/>
-                                <exclude reference="kmg-f4-XGH"/>
-                                <exclude reference="wce-NQ-RnA"/>
+                                <exclude reference="SQj-R8-Thb"/>
+                                <exclude reference="UTw-U8-nP4"/>
+                                <exclude reference="Y0U-kz-gl6"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -167,14 +172,14 @@
                                 <include reference="eP8-kz-2aQ"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="SQj-R8-Thb"/>
-                                <include reference="UTw-U8-nP4"/>
-                                <include reference="Y0U-kz-gl6"/>
+                                <include reference="kmg-f4-XGH"/>
+                                <include reference="wce-NQ-RnA"/>
                                 <include reference="Ls1-xj-ObU"/>
                                 <include reference="OQb-kL-9ix"/>
                                 <include reference="k9r-sS-QMX"/>
-                                <include reference="kmg-f4-XGH"/>
-                                <include reference="wce-NQ-RnA"/>
+                                <include reference="SQj-R8-Thb"/>
+                                <include reference="UTw-U8-nP4"/>
+                                <include reference="Y0U-kz-gl6"/>
                             </mask>
                         </variation>
                     </view>
@@ -202,7 +207,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rqk-u5-83r">
-                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="64" width="133" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="133" height="105"/>
@@ -318,13 +323,8 @@
                                 <exclude reference="3Tx-LX-Ifx"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="cKW-PN-LST"/>
-                                <exclude reference="eSc-ws-YUJ"/>
-                                <exclude reference="tgd-fh-Gag"/>
-                                <exclude reference="06q-xv-Hwe"/>
-                                <exclude reference="B1I-Vb-cPu"/>
-                                <exclude reference="btn-oe-FGp"/>
-                                <exclude reference="u31-DL-Q1i"/>
+                                <exclude reference="P4U-84-ZTc"/>
+                                <exclude reference="x3d-KB-3b8"/>
                                 <exclude reference="aI4-Sl-1Qn"/>
                                 <exclude reference="khg-SF-aNj"/>
                                 <exclude reference="mQT-4d-osp"/>
@@ -332,12 +332,17 @@
                                 <exclude reference="9Gs-AJ-2XF"/>
                                 <exclude reference="QVS-nS-PW2"/>
                                 <exclude reference="W0K-LT-e1b"/>
+                                <exclude reference="cKW-PN-LST"/>
+                                <exclude reference="eSc-ws-YUJ"/>
+                                <exclude reference="tgd-fh-Gag"/>
                                 <exclude reference="Hql-Mm-7YF"/>
                                 <exclude reference="Ohh-Te-Vj3"/>
                                 <exclude reference="XJ4-7W-XSI"/>
                                 <exclude reference="bed-O6-LPq"/>
-                                <exclude reference="P4U-84-ZTc"/>
-                                <exclude reference="x3d-KB-3b8"/>
+                                <exclude reference="06q-xv-Hwe"/>
+                                <exclude reference="B1I-Vb-cPu"/>
+                                <exclude reference="btn-oe-FGp"/>
+                                <exclude reference="u31-DL-Q1i"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -349,13 +354,8 @@
                                 <include reference="3Tx-LX-Ifx"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="cKW-PN-LST"/>
-                                <include reference="eSc-ws-YUJ"/>
-                                <include reference="tgd-fh-Gag"/>
-                                <include reference="06q-xv-Hwe"/>
-                                <include reference="B1I-Vb-cPu"/>
-                                <include reference="btn-oe-FGp"/>
-                                <include reference="u31-DL-Q1i"/>
+                                <include reference="P4U-84-ZTc"/>
+                                <include reference="x3d-KB-3b8"/>
                                 <include reference="aI4-Sl-1Qn"/>
                                 <include reference="khg-SF-aNj"/>
                                 <include reference="mQT-4d-osp"/>
@@ -363,12 +363,17 @@
                                 <include reference="9Gs-AJ-2XF"/>
                                 <include reference="QVS-nS-PW2"/>
                                 <include reference="W0K-LT-e1b"/>
+                                <include reference="cKW-PN-LST"/>
+                                <include reference="eSc-ws-YUJ"/>
+                                <include reference="tgd-fh-Gag"/>
                                 <include reference="Hql-Mm-7YF"/>
                                 <include reference="Ohh-Te-Vj3"/>
                                 <include reference="XJ4-7W-XSI"/>
                                 <include reference="bed-O6-LPq"/>
-                                <include reference="P4U-84-ZTc"/>
-                                <include reference="x3d-KB-3b8"/>
+                                <include reference="06q-xv-Hwe"/>
+                                <include reference="B1I-Vb-cPu"/>
+                                <include reference="btn-oe-FGp"/>
+                                <include reference="u31-DL-Q1i"/>
                             </mask>
                         </variation>
                     </view>
