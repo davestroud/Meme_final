@@ -99,7 +99,13 @@
                             <outlet property="delegate" destination="2qh-QB-zST" id="OxP-tX-Y9c"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="1xk-NP-gNw"/>
+                    <navigationItem key="navigationItem" id="1xk-NP-gNw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1sz-Dt-CMF">
+                            <connections>
+                                <segue destination="qLv-6e-3ob" kind="presentation" id="ede-c8-BmT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njs-7N-DOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -200,7 +206,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="E2T-7k-L2K">
-                            <size key="itemSize" width="133" height="105"/>
+                            <size key="itemSize" width="194" height="137"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -210,12 +216,31 @@
                                 <rect key="frame" x="0.0" y="64" width="133" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="133" height="105"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="194" height="137"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="beZ-Wz-yPw">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <animations/>
+                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="7" y="1" width="179" height="128"/>
+                                            </variation>
+                                        </imageView>
+                                    </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <animations/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="beZ-Wz-yPw"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="beZ-Wz-yPw"/>
+                                    </mask>
+                                </variation>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -223,7 +248,13 @@
                             <outlet property="delegate" destination="gW0-a1-8I5" id="Ktc-dE-q0R"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="cUj-z6-rkH"/>
+                    <navigationItem key="navigationItem" id="cUj-z6-rkH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kiQ-96-UKB">
+                            <connections>
+                                <segue destination="qLv-6e-3ob" kind="presentation" id="eOK-t4-xkb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ECJ-R3-296" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -415,4 +446,7 @@
     <resources>
         <image name="memeImage" width="75" height="65"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="eOK-t4-xkb"/>
+    </inferredMetricsTieBreakers>
 </document>

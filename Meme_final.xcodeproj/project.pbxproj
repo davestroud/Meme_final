@@ -117,10 +117,10 @@
 				8B19D28C1BDA81A600BFFE00 /* MemeTableViewController.swift */,
 				8B19D25E1BDA7C0100BFFE00 /* MemeEditorViewController.swift */,
 				8B19D2601BDA7C0100BFFE00 /* Main.storyboard */,
+				8B2BBD251BE7AFC900E54D0F /* DetailViewController.swift */,
 				8B19D2651BDA7C0100BFFE00 /* LaunchScreen.storyboard */,
 				8B19D2631BDA7C0100BFFE00 /* Assets.xcassets */,
 				8B19D2681BDA7C0100BFFE00 /* Info.plist */,
-				8B2BBD251BE7AFC900E54D0F /* DetailViewController.swift */,
 			);
 			path = Meme_final;
 			sourceTree = "<group>";
