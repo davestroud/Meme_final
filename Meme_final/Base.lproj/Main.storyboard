@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="786" y="942"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--DetailV Iew Controller-->
         <scene sceneID="zKz-eU-1gv">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="Y7V-yL-AfT" userLabel="Detail View Controller" customClass="DetailVIewController" customModule="Meme_final" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="Y7V-yL-AfT" customClass="DetailVIewController" customModule="Meme_final" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mz5-Eg-qgi"/>
                         <viewControllerLayoutGuide type="bottom" id="sbx-MC-Uo6"/>
