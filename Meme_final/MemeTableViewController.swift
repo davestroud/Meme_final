@@ -13,13 +13,16 @@ class MemeTableViewController: UITableViewController {
     
     var memes: [Meme]!
     let cellIdentifier = "MemeTableViewCell"
-    let appDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate).memes
+    let appDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        memes = appDelegate.memes
     }
     
     override func viewDidAppear(animated: Bool) {
+        memes = appDelegate.memes
+        
         if self.memes.count == 0 {
             let storyboard = self.storyboard
             let vc = storyboard!.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController

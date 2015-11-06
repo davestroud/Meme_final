@@ -18,7 +18,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var bottomToolBar: UIToolbar!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var shareButton: UIBarButtonItem!
-    @IBOutlet weak var  albumPickerButton: UIBarButtonItem!
+    @IBOutlet weak var albumPickerButton: UIBarButtonItem!
     
     var meme: Meme!
     
@@ -57,7 +57,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     func setupTextField (textField: UITextField, text: String, delegate: UITextFieldDelegate, attributes: [String : NSObject], alignment: NSTextAlignment) {
         textField.text = text
-        textField.delete(delegate)
+        textField.delegate = delegate
         textField.defaultTextAttributes = attributes
         textField.textAlignment = alignment
     }

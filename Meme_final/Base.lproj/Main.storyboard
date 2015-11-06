@@ -212,8 +212,8 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rqk-u5-83r">
-                                <rect key="frame" x="0.0" y="64" width="133" height="105"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionViewCell" id="rqk-u5-83r">
+                                <rect key="frame" x="0.0" y="64" width="194" height="137"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="194" height="137"/>
@@ -244,7 +244,7 @@
                             </collectionViewCell>
                         </cells>
                         <connections>
-                            <outlet property="dataSource" destination="gW0-a1-8I5" id="vbA-ZI-dja"/>
+                            <outlet property="dataSource" destination="E2T-7k-L2K" id="Eqj-Uu-c4r"/>
                             <outlet property="delegate" destination="gW0-a1-8I5" id="Ktc-dE-q0R"/>
                         </connections>
                     </collectionView>
@@ -260,10 +260,10 @@
             </objects>
             <point key="canvasLocation" x="777" y="181"/>
         </scene>
-        <!--View Controller-->
+        <!--Meme Editor View Controller-->
         <scene sceneID="MEZ-5e-DgK">
             <objects>
-                <viewController id="qLv-6e-3ob" customClass="ViewController" customModule="Meme_final" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeEditorViewController" id="qLv-6e-3ob" customClass="MemeEditorViewController" customModule="Meme_final" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cy0-xb-QwD"/>
                         <viewControllerLayoutGuide type="bottom" id="jnD-RC-8az"/>
