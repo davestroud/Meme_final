@@ -409,12 +409,11 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="albumPickerButton" destination="e9E-fS-vik" id="0kD-mD-xys"/>
                         <outlet property="bottomTextField" destination="d0h-hk-DNK" id="7mM-e8-bg4"/>
                         <outlet property="bottomToolBar" destination="o1q-RH-Dbx" id="3Wd-bS-pje"/>
                         <outlet property="cameraButton" destination="wOg-eW-wdP" id="A4g-0J-RIt"/>
                         <outlet property="cancelButton" destination="er4-n0-6M3" id="oju-mf-s5x"/>
-                        <outlet property="imagePickerView" destination="3Tx-LX-Ifx" id="EHe-M8-Xvq"/>
+                        <outlet property="imagePickerView" destination="e9E-fS-vik" id="g6V-3q-gEb"/>
                         <outlet property="shareButton" destination="r8l-2G-tLd" id="fGG-Q4-wsE"/>
                         <outlet property="topTextField" destination="MIW-ro-B9r" id="j7C-PF-YXj"/>
                         <outlet property="topToolBar" destination="NuC-qC-MdE" id="iLU-si-qtD"/>

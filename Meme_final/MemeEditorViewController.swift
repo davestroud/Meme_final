@@ -10,7 +10,7 @@ import UIKit
 
 class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
-    @IBOutlet weak var imagePickerView: UIImageView!
+    @IBOutlet weak var imagePickerView: UIBarButtonItem!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
@@ -18,14 +18,20 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var bottomToolBar: UIToolbar!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var shareButton: UIBarButtonItem!
-    @IBOutlet weak var albumPickerButton: UIBarButtonItem!
+    
     
     var meme: Meme!
+    var memedImage : UIImage!
+    var chosenMeme: Meme!
     
+    // creates the meme.  Initializes the Meme model object. Works with the struct file
     func save() ->Meme {
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
         return meme
     }
+    
+    //  method to generate the meme while hiding and unhiding the tool bars
+    //  combines the original image with overlayed text
     
     func generateMemedImage() -> UIImage {
         navigationController?.setToolbarHidden(true, animated: true)

@@ -17,7 +17,7 @@ class DetailVIewController: UIViewController {
     
     @IBAction func editButton(sender: AnyObject){
         let memeEditorViewController = storyboard?.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
-        memeEditorViewController .meme = chosenMeme
+        memeEditorViewController.meme = chosenMeme  
         presentViewController(memeEditorViewController, animated: true, completion: nil)
     }
     
